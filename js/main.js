@@ -9,4 +9,15 @@ $(document).ready(function(){
   // } else {
   //   alert('SVG not supported')
   // }
+  $('[data-toggle="tooltip"]').tooltip()
+
+  $("#svg-img").on("click", ".rect", function(e){
+    e.preventDefault();
+    $('#myModal').modal('show');
+  });
+
+  $("#svg-img-2").on("click", ".rect", function(e){
+    e.preventDefault();
+    $('#myModal').modal('show');
+  });
 });
