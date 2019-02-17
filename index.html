@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Svg</title>
+  <title>Gestor de Espacios</title>
   <!-- For Bootstrap 4.1 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +29,12 @@
 <body>
 
   <div class="container-fluid">
-    <img class="mx-auto d-block" src="https://storage.googleapis.com/cifco-bucket/organizations/1/ejemplo_pabellon_feria.png" width="1352" height="662" alt="" id="photo" style="position: relative;" />
+    <h1 class="text-center mt-3">Gestor de Espacios:</h1>
+    <h4 class="my-3 ml-3">Paso 1: Sombrea el area que deseas seleccionar.</h4>
+    <img style="border:1px black solid;" class="mx-auto d-block" src="https://storage.googleapis.com/cifco-bucket/organizations/1/ejemplo_pabellon_feria.png" width="1352" height="662" alt="" id="photo" style="position: relative;" />
   </div>
+
+<h4 class="my-3 ml-3">Paso 2: Agrega la informacion del espacio.</h4>
 
   <div class="container">
     <div class="row">
@@ -38,18 +42,18 @@
         <form>
           <div class="row">
             <div class="col m-3">
-              <input type="text" class="form-control" name="x1" placeholder="X1">
+              <input type="text" class="form-control" name="x1" placeholder="X1" disabled>
             </div>
             <div class="col m-3">
-              <input type="text" class="form-control" name="y1" placeholder="Y1">
+              <input type="text" class="form-control" name="y1" placeholder="Y1" disabled>
             </div>
           </div>
           <div class="row">
             <div class="col m-3">
-              <input type="text" class="form-control" name="x2" placeholder="X2">
+              <input type="text" class="form-control" name="x2" placeholder="X2" disabled>
             </div>
             <div class="col m-3">
-              <input type="text" class="form-control" name="y2" placeholder="Y2">
+              <input type="text" class="form-control" name="y2" placeholder="Y2" disabled>
             </div>
           </div>
           <div class="row">
@@ -70,6 +74,8 @@
     </div>
   </div>
 
+<h4 class="my-3 ml-3">Paso 3: Listo. Ya tenemos nuestro gestor de espacios responsivo, ahora clickea cualquier area que has creado...</h4>
+
   <div class="container size" id="drawing">
     <div id="svg-img" >
       <svg width="1352" height="662" viewBox="0 0 1352 662" preserveAspectRatio="xMaxYMax meet">
@@ -80,13 +86,13 @@
         </defs>
         <path d="M5,5 10,662 l1352,0 l0,-662 l-1352,0" fill="url(#img1)" />
         <g id="rect-group">
-          <rect class="rect" data-Name="shape 1" data-tabindex="0" x="109" y="25" style="fill: rgba(255, 253, 27, 0.56); stroke: green; stroke-width: 1mm; width:166; height:56" data-toggle="tooltip" data-placement="top" title="Espacio 1"/>
+          <rect class="rect" data-Name="Espacio 1" data-tabindex="0" x="109" y="25" style="fill: rgba(255, 253, 27, 0.56); stroke: green; stroke-width: 1mm; width:166; height:56" data-toggle="tooltip" data-placement="top" title="Espacio 1"/>
         </g>
       </svg>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-6">
         <div id="svg-img-2" >
@@ -120,7 +126,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>

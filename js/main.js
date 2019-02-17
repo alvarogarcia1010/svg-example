@@ -25,6 +25,9 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".rect").on('click',function(){
+      var nombre = $(this).attr('data-name');
+      $('.modal-title').html(nombre);
+      $('.modal-body').html(nombre);
       $('#myModal').modal('show');
     });
   });
@@ -32,6 +35,9 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 
   $(".rect").on('click',function(){
+    var nombre = $(this).attr('data-name');
+    $('.modal-title').html(nombre);
+    $('.modal-body').html(nombre);
     $('#myModal').modal('show');
   });
 
@@ -41,9 +47,9 @@ $(document).ready(function(){
 function createRect(x1,y1,x2,y2,name,color){
   var rect = document.createElementNS("http://www.w3.org/2000/svg","rect");
   rect.setAttribute("class", "rect");
+  rect.setAttribute("data-name",name);
   rect.setAttribute("x",x1);
   rect.setAttribute("y",y1);
-  rect.setAttribute("data-Name",name);
   rect.setAttribute("data-tabindex",1);
   rect.setAttribute("style",`fill: ${color}; stroke: green; stroke-width: 1mm; width:${x2-x1}; height:${y2-y1}`);
   rect.setAttribute("data-toggle", "tooltip");
